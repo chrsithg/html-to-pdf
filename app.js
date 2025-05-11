@@ -280,7 +280,13 @@ function Convert(html,options){
 
     this.getPdfBinary = async () => {
             // Create a browser instance
-            const browser = await puppeteer.launch({args: ["--no-sandbox", "--disabled-setupid-sandbox", '--font-render-hinting=none']});
+            const browser = await puppeteer.launch({args: 
+                [
+                    "--no-sandbox", 
+                    "--disabled-setupid-sandbox", 
+                    "--font-render-hinting=none"
+                ]
+            });
 
             // Create a new page
             const page = await browser.newPage();
@@ -329,7 +335,14 @@ function Convert(html,options){
     this.getPdf = async () => {
             // Create a browser instance
             //const browser = await puppeteer.launch();
-            const browser = await puppeteer.launch({args: ["--lang=CN","--no-sandbox", "--disabled-setupid-sandbox", '--font-render-hinting=none']});
+            const browser = await puppeteer.launch({args: 
+                [
+                    "--lang=CN",
+                    "--no-sandbox", 
+                    "--disabled-setupid-sandbox", 
+                    "--font-render-hinting=none"
+                ]
+            });
 
             // Create a new page
             const page = await browser.newPage();
